@@ -3,32 +3,32 @@ const peopleArray = [
     {
         nome : 'Wayne Barnett',
         mansione : 'Founder & CEO',
-        image : '../img/wayne-barnett-founder-ceo.jpg',
+        image : 'wayne-barnett-founder-ceo.jpg',
     },
     {
         nome : 'Angela Caroll',
         mansione : 'Chief Editor',
-        image : '../img/angela-caroll-chief-editor.jpg',
+        image : 'angela-caroll-chief-editor.jpg',
     },
     {
         nome : 'Walter Gordon',
         mansione : 'Office Manager',
-        image : '../img/walter-gordon-office-manager.jpg',
+        image : 'walter-gordon-office-manager.jpg',
     },
     {
         nome : 'Angela Lopez',
         mansione : 'Social Media Manager',
-        image : '../img/angela-lopez-social-media-manager.jpg',
+        image : 'angela-lopez-social-media-manager.jpg',
     },
     {
         nome : 'Scott Estrada',
         mansione : 'Developer',
-        image : '../img/scott-estrada-developer.jpg',
+        image : 'scott-estrada-developer.jpg',
     },
     {
         nome : 'Barbara Ramos',
         mansione : 'Graphic Designer',
-        image : '../img/barbara-ramos-graphic-designer.jpg',
+        image : 'barbara-ramos-graphic-designer.jpg',
     },
 
 ];
@@ -46,7 +46,7 @@ for ( let i = 0; i < peopleArray.length; i++){
     domCard.classList.add('col-4');
     
     domCard.innerHTML = `<div class="card">
-        <img src="..." class="card-img-top">
+        <img class="card-img-top">
         <div class="card-body">
             <h5 class="card-name">${peopleArray[i].nome}</h5>
             <p class="card-text">${peopleArray[i].mansione}</p>
@@ -54,6 +54,8 @@ for ( let i = 0; i < peopleArray.length; i++){
     </div>`;
 
     const cardImg = document.querySelector('img.card-img-top');
+    console.log(cardImg);
+    cardImg.setAttribute('src', '../img/barbara-ramos-graphic-designer.jpg');
     
 
 
