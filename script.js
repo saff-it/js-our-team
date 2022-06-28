@@ -33,10 +33,38 @@ const peopleArray = [
 
 ];
 
-for (let key in peopleArray) {
-    console.log(peopleArray[key]);
-}
+// for (let key in peopleArray) {
+//     console.log(peopleArray[key]);
+// }
+
+const cardWrapper = document.getElementById('row-wrap');
+
 
 for ( let i = 0; i < peopleArray.length; i++){
+
+    let domCard = document.createElement('div');
+    domCard.classList.add('col-4');
+
+    domCard.innerHTML = `<div class="card">
+        <img src="" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-name">${peopleArray[i].nome}</h5>
+            <p class="card-text">${peopleArray[i].mansione}</p>
+        </div>
+    </div>`;
+
+    cardWrapper.append(domCard);
+
     console.log(`${peopleArray[i].nome} ${peopleArray[i].mansione} ${peopleArray[i].image}`);
-}
+};
+
+
+/* <div class="col-4">
+                    <div class="card">
+                        <img src="" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-name">Name</h5>
+                          <p class="card-text">Job position</p>
+                        </div>
+                      </div>
+                </div> */
