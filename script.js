@@ -46,21 +46,15 @@ for ( let i = 0; i < peopleArray.length; i++){
     domCard.classList.add('col-4');
     
     domCard.innerHTML = `<div class="card">
-        <img class="card-img-top">
+        <img src="./img/${peopleArray[i].image}" class="card-img-top">
         <div class="card-body">
             <h5 class="card-name">${peopleArray[i].nome}</h5>
             <p class="card-text">${peopleArray[i].mansione}</p>
         </div>
     </div>`;
 
-    const cardImg = document.querySelector('img.card-img-top');
-    console.log(cardImg);
-    cardImg.setAttribute('src', '../img/barbara-ramos-graphic-designer.jpg');
-    
-
-
     cardWrapper.append(domCard);
+
     console.log(`${peopleArray[i].nome} ${peopleArray[i].mansione} ${peopleArray[i].image}`);
     
-
 };
