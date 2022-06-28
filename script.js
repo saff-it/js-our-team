@@ -32,3 +32,11 @@ const peopleArray = [
     },
 
 ];
+
+for (let key in peopleArray) {
+    console.log(peopleArray[key]);
+}
+
+for ( let i = 0; i < peopleArray.length; i++){
+    console.log(`${peopleArray[i].nome} ${peopleArray[i].mansione} ${peopleArray[i].image}`);
+}
